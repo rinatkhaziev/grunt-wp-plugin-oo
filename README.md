@@ -12,13 +12,13 @@ Once grunt-init is installed, place this template in your `~/.grunt-init/` direc
 ### Linux/Mac Users
 
 ```
-git clone git@github.com:10up/grunt-wp-plugin.git ~/.grunt-init/wp-plugin
+git clone git@github.com:rinatkhaziev/grunt-wp-plugin-oo.git ~/.grunt-init/wp-plugin-oo
 ```
 
 ### Windows Users
 
 ```
-git clone git@github.com:10up/grunt-wp-plugin.git %USERPROFILE%/.grunt-init/wp-plugin
+git clone git@github.com:rinatkhaziev/grunt-wp-plugin-oo.git %USERPROFILE%/.grunt-init/wp-plugin-oo
 ```
 
 ## Usage
@@ -26,7 +26,7 @@ git clone git@github.com:10up/grunt-wp-plugin.git %USERPROFILE%/.grunt-init/wp-p
 At the command-line, cd into an empty directory, run this command and follow the prompts.
 
 ```
-grunt-init wp-plugin
+grunt-init wp-plugin-oo
 ```
 
 _Note that this template will generate files in the current directory, so be sure to change to a new directory first if you don't want to overwrite existing files._
@@ -74,6 +74,10 @@ You should only ever be modifying script files in the `/js/src` directory.  Grun
 ### Images
 
 The `/images/src` directory exists only to allow you to keep track of source files (like PSDs or separate images that have been merged into sprites).  This helps keep source files under version control, and allows you to bundle them with the distribution of your new GPL plugin.
+
+## OO Release history
+
+* 2013-08-30    v0.2 Forked original grunt-wp-plugin and rewrote the template in OO manner
 
 ## Release History
 
