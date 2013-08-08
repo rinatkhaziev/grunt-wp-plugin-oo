@@ -61,6 +61,9 @@ exports.template = function( grunt, init, done ) {
 		props.prefix_caps = props.prefix.toUpperCase();
 		// An additional value, safe to use as a JavaScript identifier.
 		props.js_safe_name = props.name.replace(/[\W_]+/g, '_').replace(/^(\d)/, '_$1');
+		// PHP filename according to WP Coding standards
+		props.php_file_name = props.name.replace(/[\W_]+/g, '-').replace(/^(\d)/, '_$1');
+		props.php_class_name = props.title.replace(/[\W_]+/g, '_').replace(/^(\d)/, '_$1');
 		// An additional value that won't conflict with NodeUnit unit tests.
 		props.js_test_safe_name = props.js_safe_name === 'test' ? 'myTest' : props.js_safe_name;
 		props.js_safe_name_caps = props.js_safe_name.toUpperCase();
@@ -94,13 +97,13 @@ exports.template = function( grunt, init, done ) {
 		}
 		
 		console.log( files );
+		console.log( props );
 		
 		// Actually copy and process files
 		init.copyAndProcess( files, props );
 		
 		// Generate package.json file
 		init.writePackageJSON( 'package.json', props );
-		
 		// Done!
 		done();
 	});
