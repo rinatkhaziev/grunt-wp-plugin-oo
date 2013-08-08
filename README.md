@@ -1,4 +1,4 @@
-# grunt-wp-plugin
+# grunt-wp-plugin-oo
 
 > Create a WordPress plugin with [grunt-init][].
 
