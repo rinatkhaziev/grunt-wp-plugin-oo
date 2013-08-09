@@ -64,8 +64,7 @@ class {%= php_class_name %} {
 		add_action( 'wp_enqueue_scripts', array( $this, 'action_enqueue_scripts' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'action_admin_scripts' ) );
 		add_action( 'admin_init', array( $this, 'action_admin_init' ) );
-		add_action( 'wp_enqueue_scripts', array( $this, '' ) );
-		add_action( 'wp_enqueue_scripts', array( $this, '' ) );
+
 	}
 
 	// Setup
@@ -84,5 +83,5 @@ class {%= php_class_name %} {
 global ${%= js_safe_name %};
 ${%= js_safe_name %} = new {%= php_class_name %};
 
-register_activation_hook( __FILE__, array( ${%= js_safe_name %}, 'action_activate' );
-register_deactivation_hook( __FILE__, array( ${%= js_safe_name %}, 'action_deactivate' );
+register_activation_hook( __FILE__, array( ${%= js_safe_name %}, 'action_activate' ) );
+register_deactivation_hook( __FILE__, array( ${%= js_safe_name %}, 'action_deactivate' ) );
