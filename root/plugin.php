@@ -51,6 +51,8 @@ class {%= php_class_name %} {
 	function __construct() {
 		// Hook the init
 		add_action( 'init', array( $this, 'action_init' ) );
+		register_activation_hook( __FILE__, array( $this, 'action_activate' ) );
+		register_deactivation_hook( __FILE__, array( $this, 'action_deactivate' ) );
 	}
 
 	function action_init() {
@@ -70,13 +72,11 @@ class {%= php_class_name %} {
 
 	// Setup
 	function action_activate() {
-
 		flush_rewrite_rules();
 	}
 
 	// Cleanup
 	function action_deactivate() {
-
 		flush_rewrite_rules();
 	}
 }
@@ -84,5 +84,3 @@ class {%= php_class_name %} {
 global ${%= js_safe_name %};
 ${%= js_safe_name %} = new {%= php_class_name %};
 
-register_activation_hook( __FILE__, array( ${%= js_safe_name %}, 'action_activate' );
-register_deactivation_hook( __FILE__, array( ${%= js_safe_name %}, 'action_deactivate' );
