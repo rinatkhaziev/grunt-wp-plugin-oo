@@ -78,6 +78,20 @@ class {%= php_class_name %} {
 	function action_deactivate() {
 		flush_rewrite_rules();
 	}
+
+	// Frontend scripts
+	function action_enqueue_scripts() {
+
+	}
+
+	// Dashboard scripts
+	function action_admin_scripts() {
+
+	}
+
+	function action_admin_init(){
+
+	}
 }
 
 global ${%= js_safe_name %};
